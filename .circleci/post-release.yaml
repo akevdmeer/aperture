@@ -310,7 +310,7 @@ jobs:
         default: true
       remote-docker-version:
         type: string
-        description: Specify
+        description: Version of remote docker to use
         default: 20.10.18
     executor: python-cimg-executor
     steps:
@@ -339,7 +339,6 @@ jobs:
               cd /data/azure-marketplace/controller
               cpa verify
               cpa buildbundle
-              cd /data/azure-marketplace/agent
               cd ../agent/
               cpa verify
               cpa buildbundle
